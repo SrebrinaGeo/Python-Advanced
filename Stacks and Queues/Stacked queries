@@ -1,0 +1,16 @@
+n = int(input())
+stack = []
+
+for _ in range(n):
+    tokens = input().split()
+    if tokens[0] == "1":
+        stack.append(int(tokens[1]))
+    elif stack:
+        if tokens[0] == "2":
+            stack.pop()
+        elif tokens[0] == "3":
+            print(max(stack))
+        elif tokens[0] == "4":
+            print(min(stack))
+
+print(', '.join([str(x) for x in reversed(stack)]))
