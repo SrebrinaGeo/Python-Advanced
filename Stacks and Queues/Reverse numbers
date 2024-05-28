@@ -1,0 +1,4 @@
+numbers_input = [x for x in input().split()]
+
+while numbers_input:
+    print(numbers_input.pop(), end=" ")
